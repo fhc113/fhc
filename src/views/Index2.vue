@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <el-row :gutter="20">
+       <el-row class="tac">
   <el-col :span="16"><div class="grid-content bg-purple">
           <div class="one">
             <p class="onep"><i class="el-icon-s-platform dongdong"></i>&nbsp;今日工作

@@ -12,14 +12,14 @@
                     :value="item.value">
                     </el-option>
                 </el-select> -->
-                    数据报表
+                    销售分析
                 </div>
                 <div class="da-div">
                     <br>
                     <el-collapse accordion>
                     <el-collapse-item>
                         <template slot="title">
-                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;客户数据统计
+                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;销售过程分析
                         </template>
                         <div class="block">
                            <el-timeline :reverse="reverse">
@@ -35,7 +35,7 @@
                    <el-collapse accordion>
                     <el-collapse-item>
                         <template slot="title">
-                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;销售数据统计
+                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;销售结果分析
                         </template>
                         <div class="block">
                            <el-timeline :reverse="reverse">
@@ -51,7 +51,7 @@
                     <el-collapse accordion>
                     <el-collapse-item>
                         <template slot="title">
-                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;合同数据统计
+                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;销售行为趋势
                         </template>
                         <div class="block">
                            <el-timeline :reverse="reverse">
@@ -63,23 +63,71 @@
                         </el-timeline>
                         </div>                           
                   </el-collapse-item>
-                    </el-collapse>   
+                    </el-collapse> 
+                     <el-collapse accordion>
+                    <el-collapse-item>
+                        <template slot="title">
+                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;合同回款分析
+                        </template>
+                        <div class="block">
+                           <el-timeline :reverse="reverse">
+                            <el-timeline-item
+                            v-for="(activity, index) in activities"
+                            :key="index">
+                            {{activity.content}}
+                            </el-timeline-item>
+                        </el-timeline>
+                        </div>                           
+                  </el-collapse-item>
+                    </el-collapse>  
+                    <el-collapse accordion>
+                    <el-collapse-item>
+                        <template slot="title">
+                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;销售任务分析
+                        </template>
+                        <div class="block">
+                           <el-timeline :reverse="reverse">
+                            <el-timeline-item
+                            v-for="(activity, index) in activities"
+                            :key="index">
+                            {{activity.content}}
+                            </el-timeline-item>
+                        </el-timeline>
+                        </div>                           
+                  </el-collapse-item>
+                    </el-collapse> 
+                    <el-collapse accordion>
+                    <el-collapse-item>
+                        <template slot="title">
+                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;销售产品分析
+                        </template>
+                        <div class="block">
+                           <el-timeline :reverse="reverse">
+                            <el-timeline-item
+                            v-for="(activity, index) in activities"
+                            :key="index">
+                            {{activity.content}}
+                            </el-timeline-item>
+                        </el-timeline>
+                        </div>                           
+                  </el-collapse-item>
+                    </el-collapse> 
                 </div>
                 </div></el-col>
             <el-col :span="19"><div class="grid-content bg-purple">
                 <div class="blu">
                     <i class="el-icon-printer" style="margin-top:8px;margin-left:5px;margin-bottom:9px;"></i>&nbsp;&nbsp;
-                    公共池客户统计 <span>--</span>    
+                    销售漏斗分析<span>--</span>    
                 </div>
                 <br>
                 <div class="el-col_div">
                     XX统计  <span>Sales performance</span>
-                    <img src="../assets/img/chi.png" width="98%">
+                    <img src="../assets/img/fenbiao.png" width="98%">
                     <br><br>
-                    XX统计  <span>Report form</span>
+                    报表  <span>Report form</span>
                     <img src="../assets/img/chi2.png" width="98%">
                     <br><br>
-                    <img src="../assets/img/u10640.png" width="98%">
+                    <img src="../assets/img/u10785.png" width="98%">
                 </div>
                 
     </div></el-col>
@@ -88,7 +136,7 @@
    </template> 
 <script>
 export default {
-    name:'bao',
+    name:'fen',
     data() {
       return {
         reverse: true,
@@ -123,7 +171,8 @@ export default {
    *{
        margin: 0 auto;
        padding: 0 0;
-       background-color: rgba(250, 251, 252, 1);
+       /* background-color: rgba(250, 251, 252, 1); */
+
    }.blu span{
        float: right;
        border: 0.5px darkgrey solid;
@@ -195,9 +244,9 @@ export default {
   .el-col {
     border-radius: 4px;
   }
-  .bg-purple-dark {
+  /* .bg-purple-dark {
     background: #99a9bf;
-  }
+  } */
   .el-collapse-item__header {
     display: -webkit-box;
     display: flex;

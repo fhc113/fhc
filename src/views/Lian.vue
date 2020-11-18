@@ -1,6 +1,6 @@
 <template>
      <div class="app">
-        <el-row :gutter="20">
+       <el-row class="tac">
             <el-col :span="4"><div class="grid-content bg-purple">
                 <div class="blu">
                     <i class="el-icon-printer" style="margin-top:8px;margin-left:5px;"></i>&nbsp;&nbsp;

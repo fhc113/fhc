@@ -1,6 +1,6 @@
 <template>
     <div class="hui">
-    <el-row :gutter="20">
+    <el-row class="tac">
         <el-col :span="16"><div class="grid-content bg-purple">
                 <div class="eldiv">
                     <p class="yiop">今日简报</p>

@@ -8,7 +8,7 @@
       <p><i class="el-icon-lock"><input type="password" placeholder="请输入你的密码"></i></p>
       <p class="xiaop"><el-checkbox v-model="checked"></el-checkbox>新弹窗体<span> ( 如何设置 ) 获取MAC</span> <span>忘记密码</span></p>
       </form>
-      <router-link tag="lo" to="/bao">
+      <router-link tag="lo" to="/fen">
       <button type="button" class="butt">登录</button>
       </router-link>
         

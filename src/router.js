@@ -52,6 +52,24 @@ export default new Router({
     {
       path: '/bao',
       component: () => import('./views/Bao.vue'),
+    },
+    {
+      path: '/fen',
+      component: () => import('./views/Fen.vue'),
+    },
+    {
+      path: '/kefen',
+      component: () => import('./views/Kefen.vue'),
+    }
+    ,
+    {
+      path: '/zhishi',
+      component: () => import('./views/Zhishi.vue'),
+    }
+    ,
+    {
+      path: '/geren',
+      component: () => import('./views/Geren.vue'),
     }
  
   // ,

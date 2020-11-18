@@ -1,85 +1,35 @@
 <template>
   <div class="app">
         <el-row class="tac">
-            <el-col :span="4"><div class="grid-content bg-purple">
+            <el-col :span="4" style="background-color: white;"><div class="grid-content bg-purple iso">
                 <div class="blu">
                     <i class="el-icon-printer" style="margin-top:8px;margin-left:5px;margin-bottom:9px;"></i>&nbsp;&nbsp;
-                      <!-- <el-select v-model="value" placeholder="客户主线">
-                    <el-option
-                    v-for="item in options"
-                    :key="item.value"
-                    :label="item.label"
-                    :value="item.value">
-                    </el-option>
-                </el-select> -->
-                    数据报表
+                    
+                    客户分析
                 </div>
                 <div class="da-div">
                     <br>
-                    <el-collapse accordion>
-                    <el-collapse-item>
-                        <template slot="title">
-                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;客户数据统计
-                        </template>
-                        <div class="block">
-                           <el-timeline :reverse="reverse">
-                            <el-timeline-item
-                            v-for="(activity, index) in activities"
-                            :key="index">
-                            {{activity.content}}
-                            </el-timeline-item>
-                        </el-timeline>
-                        </div>                           
-                  </el-collapse-item>
-                    </el-collapse>
-                   <el-collapse accordion>
-                    <el-collapse-item>
-                        <template slot="title">
-                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;销售数据统计
-                        </template>
-                        <div class="block">
-                           <el-timeline :reverse="reverse">
-                            <el-timeline-item
-                            v-for="(activity, index) in activities"
-                            :key="index">
-                            {{activity.content}}
-                            </el-timeline-item>
-                        </el-timeline>
-                        </div>                           
-                  </el-collapse-item>
-                    </el-collapse>
-                    <el-collapse accordion>
-                    <el-collapse-item>
-                        <template slot="title">
-                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;合同数据统计
-                        </template>
-                        <div class="block">
-                           <el-timeline :reverse="reverse">
-                            <el-timeline-item
-                            v-for="(activity, index) in activities"
-                            :key="index">
-                            {{activity.content}}
-                            </el-timeline-item>
-                        </el-timeline>
-                        </div>                           
-                  </el-collapse-item>
-                    </el-collapse>   
+                    <p><i class="el-icon-orange"></i>&nbsp;&nbsp;客户总量分析</p>
+                    <p><i class="el-icon-orange"></i>&nbsp;&nbsp;客户画像分析</p>
+                    <p><i class="el-icon-orange"></i>&nbsp;&nbsp;客户行业转换率</p>
+                    <p><i class="el-icon-orange"></i>&nbsp;&nbsp;客户阶段漏斗</p>
+                    <p><i class="el-icon-orange"></i>&nbsp;&nbsp;客户转换率分析</p>
                 </div>
                 </div></el-col>
             <el-col :span="19"><div class="grid-content bg-purple">
                 <div class="blu">
                     <i class="el-icon-printer" style="margin-top:8px;margin-left:5px;margin-bottom:9px;"></i>&nbsp;&nbsp;
-                    公共池客户统计 <span>--</span>    
+                    客户总量分析<span>--</span>    
                 </div>
                 <br>
                 <div class="el-col_div">
                     XX统计  <span>Sales performance</span>
-                    <img src="../assets/img/chi.png" width="98%">
+                    <img src="../assets/img/kebiao.png" width="98%">
                     <br><br>
-                    XX统计  <span>Report form</span>
+                    报表  <span>Report form</span>
                     <img src="../assets/img/chi2.png" width="98%">
                     <br><br>
-                    <img src="../assets/img/u10640.png" width="98%">
+                    <img src="../assets/img/u10934.png" width="98%">
                 </div>
                 
     </div></el-col>
@@ -88,7 +38,7 @@
    </template> 
 <script>
 export default {
-    name:'bao',
+    name:'kefen',
     data() {
       return {
         reverse: true,
@@ -124,6 +74,7 @@ export default {
        margin: 0 auto;
        padding: 0 0;
        background-color: rgba(250, 251, 252, 1);
+
    }.blu span{
        float: right;
        border: 0.5px darkgrey solid;
@@ -195,9 +146,9 @@ export default {
   .el-col {
     border-radius: 4px;
   }
-  .bg-purple-dark {
+  /* .bg-purple-dark {
     background: #99a9bf;
-  }
+  } */
   .el-collapse-item__header {
     display: -webkit-box;
     display: flex;
@@ -217,6 +168,16 @@ export default {
 .da-div{
     height: 500px;
     margin: 0 0 20px 10px;
-    background-color: white;
+    /* background-color: white; */
 }
+.da-div p{
+    margin-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 0.5px darkgray solid;
+    font-size: 12px;
+    font-weight: 300;
+}
+/* .iso{
+    background-color: white;
+} */
 </style>

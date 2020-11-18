@@ -12,14 +12,14 @@
                     :value="item.value">
                     </el-option>
                 </el-select> -->
-                    数据报表
+                    知识库
                 </div>
                 <div class="da-div">
                     <br>
                     <el-collapse accordion>
                     <el-collapse-item>
                         <template slot="title">
-                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;客户数据统计
+                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;企业文化
                         </template>
                         <div class="block">
                            <el-timeline :reverse="reverse">
@@ -35,7 +35,7 @@
                    <el-collapse accordion>
                     <el-collapse-item>
                         <template slot="title">
-                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;销售数据统计
+                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;公司公告
                         </template>
                         <div class="block">
                            <el-timeline :reverse="reverse">
@@ -51,7 +51,7 @@
                     <el-collapse accordion>
                     <el-collapse-item>
                         <template slot="title">
-                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;合同数据统计
+                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;24图书馆
                         </template>
                         <div class="block">
                            <el-timeline :reverse="reverse">
@@ -63,51 +63,56 @@
                         </el-timeline>
                         </div>                           
                   </el-collapse-item>
-                    </el-collapse>   
+                    </el-collapse> 
+                      <el-collapse accordion>
+                    <el-collapse-item>
+                        <template slot="title">
+                        <i class="header-icon el-icon-folder"></i>&nbsp;&nbsp;关于公司
+                        </template>
+                        <div class="block">
+                           <el-timeline :reverse="reverse">
+                            <el-timeline-item
+                            v-for="(activity, index) in activities"
+                            :key="index">
+                            {{activity.content}}
+                            </el-timeline-item>
+                        </el-timeline>
+                        </div>                           
+                  </el-collapse-item>
+                    </el-collapse>     
                 </div>
                 </div></el-col>
-            <el-col :span="19"><div class="grid-content bg-purple">
-                <div class="blu">
-                    <i class="el-icon-printer" style="margin-top:8px;margin-left:5px;margin-bottom:9px;"></i>&nbsp;&nbsp;
-                    公共池客户统计 <span>--</span>    
+            <el-col :span="19">
+                <div class="blu1">
+                  <i class="el-icon-printer" style="margin-top:25px;margin-left:5px;display:none;padding-top:10px;"></i>&nbsp;&nbsp;
+                  <el-tabs v-model="activeName" @tab-click="handleClick" class="ioii">
+                    <el-tab-pane label="首页" name="first"></el-tab-pane>
+                    <el-tab-pane label="企业平台" name="second"></el-tab-pane>
+                    <el-tab-pane label="平台中心" name="third"></el-tab-pane>
+                    <el-tab-pane label="销售中心" name="fourth"></el-tab-pane>
+                </el-tabs>
+                    
                 </div>
                 <br>
                 <div class="el-col_div">
-                    XX统计  <span>Sales performance</span>
-                    <img src="../assets/img/chi.png" width="98%">
-                    <br><br>
-                    XX统计  <span>Report form</span>
-                    <img src="../assets/img/chi2.png" width="98%">
-                    <br><br>
-                    <img src="../assets/img/u10640.png" width="98%">
+                   
                 </div>
-                
-    </div></el-col>
+         </el-col>
         </el-row>
     </div>
    </template> 
 <script>
 export default {
-    name:'bao',
+    name:'zhishi',
     data() {
       return {
         reverse: true,
         activities: [{
-          content: '部门客户数量对比',
+          content: '公司及内部公告',
         }, {
-          content: '月度新增客户统计',
+          content: '产品创想工厂',
         }, {
-          content: '客户价值统计',
-        }, {
-          content: '客户行业统计',
-        }, {
-          content: '客户区域统计',
-        }, {
-          content: '客户来源统计',
-        }, {
-          content: '客户类型统计',
-        }, {
-          content: '公共池客户统计',
+          content: '公司级常备资料',
         }]
       };
     }
@@ -151,7 +156,7 @@ export default {
        margin-top: 10px;    
    }
    .el-icon-arrow-right:before{
-    content: "";
+    content: none;
     }
     .el-timeline-item__wrapper{
     position: relative;
@@ -183,7 +188,26 @@ export default {
        font-size: 10px;
        /* border-right: #99a9bf 0.5px solid; */
   }
+  .ioii{
+      /* float: right; */
+      margin-left: 500px;
+      position: absolute;
+      top: -2px;
+      height: 38px!important;
+      z-index: 0.3px;
+  }
+  .el-tabs__nav-wrap::after {
+    background-color:transparent!important;
+  }
+  .el-tabs__nav is-top div{
+    color: red!important;
+  }
    .blu{
+      
+       border-bottom: cyan 1.5px solid;
+   }
+   .blu1{
+       margin-top: 16px;
        border-bottom: cyan 1.5px solid;
    }
   .el-row {
@@ -197,6 +221,12 @@ export default {
   }
   .bg-purple-dark {
     background: #99a9bf;
+  }
+  .el-tabs__nav-wrap::after{
+    content: none;
+    width: 0px;
+    background-color: cyan;
+    color: cyan;
   }
   .el-collapse-item__header {
     display: -webkit-box;
